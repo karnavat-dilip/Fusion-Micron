@@ -89,7 +89,7 @@ function Header() {
             [name]: value,
         });
     };
-    axios.defaults.withCredentials=true;
+    axios.defaults.withCredentials = true;
     const handleSubmit = async (e) => {
         e.preventDefault();
         setloading(true)
@@ -227,49 +227,49 @@ function Header() {
         setIsOpen(!isOpen);
     };
 
-const products = [
-  {
-    id: uuidv4(),
-    img: stardelta,
-    title: 'Dolomite Powder'
-  },
-  {
-    id: uuidv4(),
-    img: atspanel,
-    title: 'Calcium Carbonate for Water Treatment'
-  },
-  {
-    id: uuidv4(),
-    img: dolmccb,
-    title: 'Calcium Carbonate for Pipes & PVC products'
-  },
-  {
-    id: uuidv4(),
-    img: dolgold,
-    title: 'Calcium Carbonate for Ceramics'
-  },
-  {
-    id: uuidv4(),
-    img: dolpanel,
-    title: 'Calcium Carbonate for Master batch'
-  },
-  {
-    id: uuidv4(),
-    img: star_delta_mccb,
-    title: 'Calcium Carbonate for Paper & Printing'
-  },
+    const products = [
+        {
+            id: uuidv4(),
+            img: stardelta,
+            title: 'Dolomite Powder'
+        },
+        {
+            id: uuidv4(),
+            img: atspanel,
+            title: 'Calcium Carbonate for Water Treatment'
+        },
+        {
+            id: uuidv4(),
+            img: dolmccb,
+            title: 'Calcium Carbonate for Pipes & PVC products'
+        },
+        {
+            id: uuidv4(),
+            img: dolgold,
+            title: 'Calcium Carbonate for Ceramics'
+        },
+        {
+            id: uuidv4(),
+            img: dolpanel,
+            title: 'Calcium Carbonate for Master batch'
+        },
+        {
+            id: uuidv4(),
+            img: star_delta_mccb,
+            title: 'Calcium Carbonate for Paper & Printing'
+        },
 
-  {
-    id: uuidv4(),
-    img: Hp100msdol,
-    title: 'Calcium Carbonate for Paints & Coating'
-  },
-  {
-    id: uuidv4(),
-    img: Hp100mssd,
-    title: 'Calcium Carbonate for Animal feed supplements'
-  }
-]
+        {
+            id: uuidv4(),
+            img: Hp100msdol,
+            title: 'Calcium Carbonate for Paints & Coating'
+        },
+        {
+            id: uuidv4(),
+            img: Hp100mssd,
+            title: 'Calcium Carbonate for Animal feed supplements'
+        }
+    ]
     return (
         <>
             <header className='header-section'>
@@ -308,8 +308,11 @@ const products = [
                     </div>
                 </div>
                 <div className='header-bottom'>
-                    <nav className={isSticky ? 'sticky' : 'navbar'} style={{display:'flex',alignItems:'center'}}>
-                            <img src={glogo} width='200px' height='100px' style={{objectFit:'cover' ,paddingLeft:'70px'}} alt='logo not available'></img>
+                    <nav className={isSticky ? 'sticky' : 'navbar'} style={{ display: 'flex', alignItems: 'center' }}>
+                        <img src={glogo} width='200px' height='100px' style={{
+                            objectFit: 'cover', position: 'relative',
+                            left: '140px'
+                        }} alt='logo not available'></img>
                         <div className='container'>
 
                             <div className={`nav-links ${isOpen ? 'open' : ''}`}>
@@ -327,7 +330,7 @@ const products = [
                                                             return (
                                                                 <div key={product.id}>
                                                                     <Link to={`/Allproduct/${index + 1}`}>
-                                                                        <img src={product.img} width='100' style={{ alignSelf: 'center' }} />
+                                                                        <img src={product.img} width='200' style={{ alignSelf: 'center' }} />
                                                                         <h3>{product.title}</h3>
                                                                     </Link>
                                                                 </div>
@@ -458,7 +461,7 @@ const products = [
                         </Link>
                     </li>
                 </ul>
-                
+
             </div>
             <div className="mobile-header-section d-block d-lg-none">
                 {/* Start Mobile Header Wrapper */}
@@ -471,12 +474,12 @@ const products = [
                                         <img
                                             src={glogo}
                                             alt="logo not available"
-                                            width='100'
+                                            width='140'
                                             className="mobile-logo-img"
                                         />
                                     </Link>
                                 </div>
-                                <Menu isOpen={menu} onStateChange={(state) => setmenu(state.isOpen)} 
+                                <Menu isOpen={menu} onStateChange={(state) => setmenu(state.isOpen)}
                                 >
                                     <div className="offcanvas-mobile-menu-wrapper">
                                         {/* Start Mobile Menu User Top */}
@@ -486,13 +489,13 @@ const products = [
                                             </span>
                                             {/* Start Header Top Menu */}
                                             <ul className="mobile-menu-user-menu">
-                                                    <li className="header-user-menu-link">
-                                                        <IoMdMail />
-                                                        <Link to="mailto:fusionmicron@gmail.com" target="_blank">
-                                                            &nbsp;
-                                                        </Link>
-                                                        <b> fusionmicron@gmail.com</b>
-                                                    </li>
+                                                <li className="header-user-menu-link">
+                                                    <IoMdMail />
+                                                    <Link to="mailto:fusionmicron@gmail.com" target="_blank">
+                                                        &nbsp;
+                                                    </Link>
+                                                    <b> fusionmicron@gmail.com</b>
+                                                </li>
                                                 <li className="header-user-menu-link">
                                                     <IoIosCall />
                                                     <Link to="tel:+91 9427392493" target="_blank">
@@ -549,7 +552,7 @@ const products = [
                                                 <ul>
                                                     <li className="mobileli">
 
-                                                        <NavLink onClick={()=>setmenu(false)} to="/" activeClassName="active"><FaHome className='fa-icon' />Home</NavLink>
+                                                        <NavLink onClick={() => setmenu(false)} to="/" activeClassName="active"><FaHome className='fa-icon' />Home</NavLink>
                                                     </li>
 
                                                     <li className="mobileli">
@@ -564,7 +567,7 @@ const products = [
                                                                     alignItems: 'center'
                                                                 }}>
                                                                     <AiOutlineAppstore className='fa-icon' />
-                                                                    <Link onClick={()=>setmenu(false)} to='/Allproduct'>
+                                                                    <Link onClick={() => setmenu(false)} to='/Allproduct'>
                                                                         Products
                                                                     </Link>
                                                                 </div>
@@ -572,30 +575,30 @@ const products = [
                                                             <AccordionDetails>
                                                                 <ul className="mobile-sub-menu">
                                                                     <li>
-                                                                        <NavLink onClick={()=>setmenu(false)} activeClassName="active" to="/Allproduct/1">Dolomite Powder</NavLink>
+                                                                        <NavLink onClick={() => setmenu(false)} activeClassName="active" to="/Allproduct/1">Dolomite Powder</NavLink>
                                                                     </li>
                                                                     <li>
-                                                                        <NavLink onClick={()=>setmenu(false)} activeClassName="active" to="/Allproduct/2">Calcium Carbonate for Water Treatment</NavLink>
+                                                                        <NavLink onClick={() => setmenu(false)} activeClassName="active" to="/Allproduct/2">Calcium Carbonate for Water Treatment</NavLink>
                                                                     </li>
                                                                     <li>
-                                                                        <NavLink onClick={()=>setmenu(false)} activeClassName="active" to="/Allproduct/3">Calcium Carbonate for Pipes & PVC products</NavLink>
+                                                                        <NavLink onClick={() => setmenu(false)} activeClassName="active" to="/Allproduct/3">Calcium Carbonate for Pipes & PVC products</NavLink>
                                                                     </li>
                                                                     <li>
-                                                                        <NavLink onClick={()=>setmenu(false)} activeClassName="active" to="/Allproduct/4">Calcium Carbonate for Ceramics</NavLink>
+                                                                        <NavLink onClick={() => setmenu(false)} activeClassName="active" to="/Allproduct/4">Calcium Carbonate for Ceramics</NavLink>
                                                                     </li>
                                                                     <li>
-                                                                        <NavLink onClick={()=>setmenu(false)} activeClassName="active" to="/Allproduct/5">Calcium Carbonate for Master batch</NavLink>
+                                                                        <NavLink onClick={() => setmenu(false)} activeClassName="active" to="/Allproduct/5">Calcium Carbonate for Master batch</NavLink>
                                                                     </li>
                                                                     <li>
-                                                                        <NavLink onClick={()=>setmenu(false)} activeClassName="active" to="/Allproduct/6">Calcium Carbonate for Paper & Printing</NavLink>
+                                                                        <NavLink onClick={() => setmenu(false)} activeClassName="active" to="/Allproduct/6">Calcium Carbonate for Paper & Printing</NavLink>
                                                                     </li>
                                                                     <li>
-                                                                        <NavLink onClick={()=>setmenu(false)} activeClassName="active" to="/Allproduct/7">Calcium Carbonate for Paints & Coating</NavLink>
+                                                                        <NavLink onClick={() => setmenu(false)} activeClassName="active" to="/Allproduct/7">Calcium Carbonate for Paints & Coating</NavLink>
                                                                     </li>
                                                                     <li>
-                                                                        <NavLink onClick={()=>setmenu(false)} activeClassName="active" to="/Allproduct/8">Calcium Carbonate for Animal feed supplements</NavLink>
+                                                                        <NavLink onClick={() => setmenu(false)} activeClassName="active" to="/Allproduct/8">Calcium Carbonate for Animal feed supplements</NavLink>
                                                                     </li>
-                                                                   
+
                                                                 </ul>
                                                             </AccordionDetails>
                                                         </CustomAccordion>
@@ -609,7 +612,7 @@ const products = [
                                                     </li> */}
                                                     <li className="mobileli">
 
-                                                        <NavLink onClick={()=>setmenu(false)} activeClassName="active" to="/about" className="menuBtn">
+                                                        <NavLink onClick={() => setmenu(false)} activeClassName="active" to="/about" className="menuBtn">
                                                             <FaCircleInfo className='fa-icon' />
                                                             About Us
                                                         </NavLink>
@@ -630,7 +633,7 @@ const products = [
                                                             <CustomAccordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
                                                                 <AccordionSummary
                                                                     expandIcon={<ExpandMoreIcon />}
-                                                                   
+
                                                                 >
                                                                     <GrGallery className='fa-icon' />
                                                                     Gallery
@@ -638,7 +641,7 @@ const products = [
                                                                 <AccordionDetails>
                                                                     <ul className="mobile-sub-menu">
                                                                         <li>
-                                                                            <NavLink onClick={()=>setmenu(false)} activeClassName="active" to="/photos">Photos</NavLink>
+                                                                            <NavLink onClick={() => setmenu(false)} activeClassName="active" to="/photos">Photos</NavLink>
                                                                         </li>
                                                                         {/* <li>
                                                                             <NavLink onClick={()=>setmenu(false)} activeClassName="active" to="/videos">Videos</NavLink>
@@ -651,7 +654,7 @@ const products = [
                                                     </li>
                                                     <li className="mobileli">
 
-                                                        <NavLink onClick={()=>setmenu(false)} activeClassName="active" to="/contact"><MdContactPhone className='fa-icon' />Contact Us</NavLink>
+                                                        <NavLink onClick={() => setmenu(false)} activeClassName="active" to="/contact"><MdContactPhone className='fa-icon' />Contact Us</NavLink>
                                                     </li>
                                                 </ul>
                                             </div>{" "}

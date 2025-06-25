@@ -44,7 +44,7 @@
 
 .panels {
   width: 23%;
-  mix-blend-mode: darken;
+  mix-blend-mode:plus-lighter;
 }
 
 .arrow-2 {

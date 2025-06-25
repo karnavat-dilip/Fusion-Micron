@@ -94,7 +94,7 @@ function AllProduct() {
                         return(
                           <Link key={product.id} className='product-child' to={`/Allproduct/${index+1}`}>
                             <h4>{product.title}</h4>
-                            <img src={product.img} width='100'/>
+                            <img src={product.img} width='200'/>
                             <h3>Description</h3>
                             <p>{`${product.description.slice(0,58)}...`}</p>
                             <ul>

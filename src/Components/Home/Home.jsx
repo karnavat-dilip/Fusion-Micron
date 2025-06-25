@@ -240,7 +240,7 @@ function Home() {
         <section data-aos="fade-up">
           <div className='container'>
             <div className='h1-container'>
-              <h1>Welcome to our Fusion Micron</h1>
+              <h1>Welcome to our <span style={{color:'#263078',fontSize:'larger'}}>Fusion Micron</span></h1>
             </div>
             <div className='intro'>
               <div className='d-flex'>
@@ -300,7 +300,7 @@ function Home() {
                       <SwiperSlide key={product.id} className='swiper-child'>
                         {/* <div key={product.id} className='swiper-child'> */}
                         <Link to={`/Allproduct/${index + 1}`}>
-                          <img src={product.img} width='100px' />
+                          <img src={product.img} width='200px' /><br/>
                           <h3>{product.title}</h3>
                         </Link>
                         {/* </div> */}
@@ -319,19 +319,19 @@ function Home() {
             <div className='count-container'>
               <div className='totalno'>
 
-                {<CountUp start={0} end={151200} duration={2} delay={0} />}+
+                {<CountUp start={0} end={60000} duration={2} delay={0} />}+
 
                 <h4>SQ. FT Manufacturing Unit</h4>
               </div>
               <div className='totalno'>
 
-                {<CountUp start={0} end={12100} duration={5} delay={0} />}+
+                {<CountUp start={0} end={2200} duration={5} delay={0} />}+
 
                 <h4>Metric ton Production Capacity</h4>
               </div>
               <div className='totalno'>
 
-                {<CountUp start={0} end={600} duration={5} delay={0} />}+
+                {<CountUp start={0} end={60} duration={5} delay={0} />}+
 
                 <h4>Valuable Clients</h4>
               </div>
@@ -398,7 +398,7 @@ function Home() {
             </div>
           </div>
         </section> */}
-        <section data-aos="fade-up">
+        {/* <section data-aos="fade-up">
           <div className='container'>
             <div className='h1-container'>
               <h1>Our Service
@@ -413,7 +413,7 @@ function Home() {
             />
 
           </div>
-        </section >
+        </section > */}
         <section>
 
         </section>

@@ -384,7 +384,7 @@ function ProductById() {
                   return (
                     <SwiperSlide key={product.id} className='related-product'>
                       <Link key={product.id} to={`/Allproduct/${index + 1}`}>
-                        <img src={product.img} width='100' />
+                        <img src={product.img} width='200' />
                         <h4>{product.title}</h4>
                         <p>{`${product.description.slice(0, 48)}...`}</p>
                         <ul>
